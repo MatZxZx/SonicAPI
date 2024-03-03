@@ -1,0 +1,15 @@
+{
+
+    "name": "",
+
+    "year": "YYYY-MM-DD",
+
+    "developmentTeam": "",
+
+    "sales": 0,
+
+    "description": "",
+
+    "console": ""
+
+}
