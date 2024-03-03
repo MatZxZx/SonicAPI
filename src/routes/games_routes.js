@@ -29,15 +29,21 @@ router.post('/', async(request, response) => {
 
 router.delete('/:name', async(request, response) => {
 
-    return response.send("HELLO WORLD!")
+    const name = request.params.name
+
+    const deleteGame = await Game.findOneAndDelete({name})
+    
+    return response.send("se ha eliminado: " + name)
 
 })
 
 router.put('/:name', async(request, response) => {
+
     const name = request.params.name
     const oldGame = await Game.findOneAndUpdate({ name }, request.body)
     const game = await Game.findOne({ name })
     return response.send(game)
+
 })
 
 module.exports = router
